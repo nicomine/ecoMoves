@@ -1,17 +1,20 @@
-import { useContext } from "react"
-import { UserContext } from "../context/userContext"
+import { useContext } from "react";
+import { UserContext } from "../context/userContext";
+import "../styles/Movements.styles.css";
 
 export const Movements = () => {
+  let { movements, setMovements } = useContext(UserContext);
 
- const {movements, setMovements} = useContext(UserContext) 
-
-console.log('MOVIMIENTOS', movements)
-
- return(
-<div>
-{ movements && movements?.map(movement =>  
-<p>{movement.name} - {movement.amount}</p>
-)}
-</div>
-)
-}
+  return (
+    <div className="movements-container">
+      <p className="title">Movements</p>
+      <span className="divider" />
+      {movements &&
+        movements?.map((movement) => (
+          <p>
+            {movement.name} - {movement.amount}
+          </p>
+        ))}
+    </div>
+  );
+};

@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { UserContext } from "../context/userContext";
+import "../styles/ActionCard.styles.css";
 
 export const ActionCard = () => {
   const [amount, setAmount] = useState();
@@ -16,7 +17,7 @@ export const ActionCard = () => {
       setBalance((prevState) => prevState - amountF);
     }
 
-    setMovements(prevState => [
+    setMovements((prevState) => [
       ...prevState,
       { name: movementName, amount: amount },
     ]);
@@ -25,22 +26,27 @@ export const ActionCard = () => {
   };
 
   return (
-    <div>
-      Añadir Movimientos
-      <input
-        onChange={(e) => setMovementName(e.target.value)}
-        placeholder="Nombre del movimiento"
-        type="string"
-        value={movementName}
-      />
-      <input
-        onChange={(e) => setAmount(Number(e.target.value))}
-        placeholder="Cantidad de dinero"
-        type="number"
-        value={amount}
-      />
-      <button onClick={() => handleBalance(amount, true)}>+</button>
-      <button onClick={() => handleBalance(amount, false)}>-</button>
-    </div>
+    <div className="action-card-container">
+      <p className="title">añadir movimientos</p>
+ <span className="divider"/>     
+ <div className="input-container">
+        <input
+          onChange={(e) => setMovementName(e.target.value)}
+          placeholder="Nombre del movimiento"
+          type="string"
+          value={movementName}
+        />
+        <input
+          onChange={(e) => setAmount(Number(e.target.value))}
+          placeholder="Cantidad de dinero"
+          type="number"
+          value={amount}
+        />
+      </div>
+      <div className="button-container">
+        <button className="button-add" onClick={() => handleBalance(amount, true)}>+</button>
+        <button className="button-decrease" onClick={() => handleBalance(amount, false)}>-</button>
+      </div>
+   </div>
   );
 };

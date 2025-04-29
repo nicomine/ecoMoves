@@ -1,14 +1,46 @@
-body{
+.profile-container {
+  display: flex;
+  flex-direction: column;
 
+  align-self: center;
+
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(23, 28, 32, 0.274);
+  border: 5px solid rgba(6, 44, 75, 0.315);
+  margin: 15px;
+
+  height: 80vh;
+  width: 20%;
+  max-width: 30rem;
+  border-radius: 15px;
+  padding: 0 1rem;
+
+  text-transform: capitalize;
 }
 
-.profile-container{
-display: flex;
-flex-direction: column;
+.profile-container::before {
+  content: "";
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+ top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+}
 
-align-items: center;
-justify-content: center;
+.profile-name {
+  font-size: 3rem;
+  font-weight: 200;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 
- height: 100%;
- width: 25%;
+.balance {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 300;
 }

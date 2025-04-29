@@ -1,0 +1,22 @@
+.movements-container {
+  display: flex;
+  flex-direction: column;
+
+  align-self: center;
+
+  align-items: center;
+  justify-content: flex-start;
+
+  background-color: rgba(23, 28, 32, 0.274);
+  border: 5px solid rgba(6, 44, 75, 0.315);
+  margin: 15px;
+  border-radius: 15px;
+
+  height: 80vh;
+  width: 40%;
+}
+
+.title {
+  display: flex;
+  align-self: center;
+}

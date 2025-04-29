@@ -1,0 +1,70 @@
+.action-card-container {
+  display: flex;
+  flex-direction: column;
+
+  align-self: center;
+
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(23, 28, 32, 0.274);
+  border: 5px solid rgba(6, 44, 75, 0.315);
+  margin: 15px;
+  border-radius: 15px;
+
+  height: 80dvh;
+  width: 30%;
+
+  overflow: auto;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 200;
+}
+
+.input-container {
+ margin: 2.5rem 0 2.5rem 0;
+  display: flex;
+justify-content: space-around;
+ width: 100%; 
+}
+
+.input-container input {
+  background-color: rgba(48, 48, 48, 0.274);
+  border: 1px solid rgb(34, 43, 39);
+  border-radius: 5px;
+  height: 2rem;
+ width: 40%;
+ max-width: 20rem;
+color: rgb(179, 177, 177);
+}
+
+.button-container{
+ display: flex;
+ flex-direction: row;
+width: 100%;
+ align-items: center;
+justify-content: center;
+}
+
+.button-container button{
+ margin: 0 2rem;  
+border: 1px solid rgb(34, 43, 39);
+ font-weight: 600;
+font-size: 1rem;
+text-align: center;
+}
+
+.button-add{
+  width: 3rem;
+height: 3rem;
+background-color: rgb(95, 148, 95);
+}
+.button-decrease{
+  width: 3rem;
+height: 3rem;
+background-color: brown;
+}
