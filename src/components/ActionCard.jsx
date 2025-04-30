@@ -28,14 +28,19 @@ export const ActionCard = () => {
   return (
     <div className="action-card-container">
       <p className="title">añadir movimientos</p>
- <span className="divider"/>     
- <div className="input-container">
-        <input
-          onChange={(e) => setMovementName(e.target.value)}
-          placeholder="Nombre del movimiento"
-          type="string"
-          value={movementName}
-        />
+      <span className="divider" />
+      <div className="input-container">
+        <div>
+          <h4>Movimiento</h4>
+          <input
+            onChange={(e) => setMovementName(e.target.value)}
+            placeholder="Nombre del movimiento"
+            type="string"
+            value={movementName}
+          />
+        </div>
+        <h4>Monto</h4>
+
         <input
           onChange={(e) => setAmount(Number(e.target.value))}
           placeholder="Cantidad de dinero"
@@ -44,9 +49,19 @@ export const ActionCard = () => {
         />
       </div>
       <div className="button-container">
-        <button className="button-add" onClick={() => handleBalance(amount, true)}>+</button>
-        <button className="button-decrease" onClick={() => handleBalance(amount, false)}>-</button>
+        <button
+          className="button-add"
+          onClick={() => handleBalance(amount, true)}
+        >
+          +
+        </button>
+        <button
+          className="button-decrease"
+          onClick={() => handleBalance(amount, false)}
+        >
+          -
+        </button>
       </div>
-   </div>
+    </div>
   );
 };
