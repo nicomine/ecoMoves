@@ -9,7 +9,9 @@ export const ActionCard = () => {
   const { setBalance, setMovements } = useContext(UserContext);
 
   const handleBalance = (amountF, increment) => {
+    parseFloat(amountF);
     if (amountF <= 0) return;
+    if (movementName.length < 1) return;
 
     if (increment) {
       setBalance((prevState) => prevState + amountF);
@@ -23,7 +25,10 @@ export const ActionCard = () => {
     ]);
 
     setAmount(0);
+    setMovementName("");
   };
+
+  console.log(amount);
 
   return (
     <div className="action-card-container">
@@ -40,7 +45,6 @@ export const ActionCard = () => {
           />
         </div>
         <h4>Monto</h4>
-
         <input
           onChange={(e) => setAmount(Number(e.target.value))}
           placeholder="Cantidad de dinero"

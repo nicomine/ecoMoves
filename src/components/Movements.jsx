@@ -3,17 +3,18 @@ import { UserContext } from "../context/userContext";
 import "../styles/Movements.styles.css";
 
 export const Movements = () => {
-  let { movements, setMovements } = useContext(UserContext);
+  let { movements } = useContext(UserContext);
 
   return (
     <div className="movements-container">
       <p className="title">Movements</p>
       <span className="divider" />
       {movements &&
-        movements?.map((movement) => (
-          <p>
-            {movement.name} - {movement.amount}
-          </p>
+        movements?.toReversed().map((movement) => (
+          <div className="movement">
+            <p className="movement-name">{movement.name}</p> 
+            <p className="movement-amount">{movement.amount}</p> 
+          </div>
         ))}
     </div>
   );

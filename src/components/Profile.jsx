@@ -7,7 +7,7 @@ export const Profile = () => {
 
   return (
     <div className="profile-container">
-      <p className="profile-name">{userData.name}</p>
+      <h1 className="profile-name">{userData.name}</h1>
       <span className="divider" />
       <p className="balance">
         Balance actual<p>${userData.balance}</p>

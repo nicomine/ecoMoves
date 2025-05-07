@@ -7,8 +7,8 @@
   align-items: center;
   justify-content: center;
 
-  background-color: rgba(23, 28, 32, 0.274);
-  border: 5px solid rgba(6, 44, 75, 0.315);
+  background-color: #6f97a1;
+  border: 2.5px solid #486772;
   margin: 15px;
 
   height: 80vh;
@@ -24,15 +24,15 @@
   content: "";
   position: relative;
   border: 1px solid rgba(255, 255, 255, 0.2);
- top: 10px;
+  top: 10px;
   left: 10px;
   right: 10px;
   bottom: 10px;
 }
 
 .profile-name {
+ font-weight: 400;
   font-size: 3rem;
-  font-weight: 200;
   max-width: 100%;
   overflow: hidden;
   white-space: nowrap;
@@ -42,5 +42,5 @@
 .balance {
   text-align: center;
   font-size: 1.1rem;
-  font-weight: 300;
+  font-weight: 400;
 }

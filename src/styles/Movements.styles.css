@@ -7,16 +7,41 @@
   align-items: center;
   justify-content: flex-start;
 
-  background-color: rgba(23, 28, 32, 0.274);
-  border: 5px solid rgba(6, 44, 75, 0.315);
+  background-color: #6f97a1;
+  border: 2.5px solid #486772;
   margin: 15px;
   border-radius: 15px;
 
   height: 80vh;
   width: 40%;
+
+overflow: auto;
 }
 
 .title {
   display: flex;
+ font-weight: 400;
   align-self: center;
+}
+
+.movement {
+  display: flex;
+  flex-direction: column;
+  height: 5rem;
+  width: 90%;
+  background: #7cb4ca1a;
+margin-top: 1rem;
+padding: 0 1rem ;
+ align-items: flex-start;
+ justify-content: center;
+}
+
+.movement-name {
+  height: 25%;
+}
+
+.movement-amount {
+  height: 25%;
+  color: rgb(175, 175, 175);
+  font-size: 0.8rem;
 }
