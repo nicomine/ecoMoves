@@ -10,7 +10,7 @@ export const Profile = () => {
       <h1 className="profile-name">{userData.name}</h1>
       <span className="divider" />
       <p className="balance">
-        Balance actual<p>${userData.balance}</p>
+        Balance actual ${userData.balance}
       </p>
     </div>
   );

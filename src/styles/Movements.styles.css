@@ -15,33 +15,40 @@
   height: 80vh;
   width: 40%;
 
-overflow: auto;
+  overflow: auto;
 }
 
 .title {
   display: flex;
- font-weight: 400;
+  font-weight: 400;
   align-self: center;
 }
 
 .movement {
   display: flex;
   flex-direction: column;
+
   height: 5rem;
   width: 90%;
-  background: #7cb4ca1a;
-margin-top: 1rem;
-padding: 0 1rem ;
- align-items: flex-start;
- justify-content: center;
+
+  border-radius: 15px;
+  background: #c6d8db;
+  border-left: 15px solid #486772;
+
+  margin-top: 1rem;
+  padding: 0 1rem;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .movement-name {
-  height: 25%;
+  max-height: 50%;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .movement-amount {
   height: 25%;
-  color: rgb(175, 175, 175);
+  color: #486772;
   font-size: 0.8rem;
 }

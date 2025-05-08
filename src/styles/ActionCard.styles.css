@@ -43,7 +43,6 @@
   max-width: 10rem;
 }
 
-
 .button-container {
   display: flex;
   flex-direction: row;
@@ -64,7 +63,8 @@
   width: 7rem;
   height: 7rem;
   background-color: #c6d8db;
-border-radius:15px;
+  border-radius: 15px;
+ transition: width 0.3s ease, background-color 0.3s ease;
 }
 
 .button-add:hover {
@@ -76,7 +76,8 @@ border-radius:15px;
   width: 7rem;
   height: 7rem;
   background-color: #c6d8db;
-border-radius:15px;
+  border-radius: 15px;
+ transition: width 0.3s ease, background-color 0.3s ease;
 }
 
 .button-decrease:hover {

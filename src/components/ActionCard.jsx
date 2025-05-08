@@ -6,29 +6,41 @@ export const ActionCard = () => {
   const [amount, setAmount] = useState();
   const [movementName, setMovementName] = useState();
 
-  const { setBalance, setMovements } = useContext(UserContext);
+  const { setBalance, setMovements, balance } = useContext(UserContext);
 
   const handleBalance = (amountF, increment) => {
     parseFloat(amountF);
     if (amountF <= 0) return;
     if (movementName.length < 1) return;
 
+    let action = increment ? "+" : "-";
+
     if (increment) {
       setBalance((prevState) => prevState + amountF);
+      localStorage.setItem("balance", balance + amountF);
     } else {
       setBalance((prevState) => prevState - amountF);
+      localStorage.setItem("balance", balance - amountF);
     }
 
     setMovements((prevState) => [
       ...prevState,
-      { name: movementName, amount: amount },
+      { name: movementName, amount: amount, action: action },
     ]);
 
-    setAmount(0);
+    const stored = JSON.parse(localStorage.getItem("movements") || "[]");
+
+    localStorage.setItem(
+      "movements",
+      JSON.stringify([
+        ...stored,
+        { name: movementName, amount: amount, action: action },
+      ])
+    );
+
+    setAmount("");
     setMovementName("");
   };
-
-  console.log(amount);
 
   return (
     <div className="action-card-container">

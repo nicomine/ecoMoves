@@ -1,21 +1,17 @@
-import { createContext, useState } from "react";
+import { createContext,  useEffect,  useState } from "react";
 
 export const UserContext = createContext();
 
-export function UserContextProvider({children}) {
-  const [name, setName] = useState("nico")
-  const [balance, setBalance] = useState(5000)
- const [movements, setMovements] = useState([{name:'test', amount:1500}])
+export function UserContextProvider({ children }) {
+  const [name, setName] = useState("nico");
+  const [balance, setBalance] = useState(5000);
+  const [movements, setMovements] = useState();
+ useEffect(() => {
+  setMovements(JSON.parse(localStorage.getItem('movements'))||[])
+  setBalance(JSON.parse(localStorage.getItem('balance'))||0)
+ }, [])
 
+  const value = { name, setName, balance, setBalance, movements, setMovements };
 
-const value ={name,setName, balance, setBalance, movements,setMovements}
-
- return(
- 
-<UserContext.Provider value={value}>
-{children}
-</UserContext.Provider>
-
-)
-
+  return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 }
