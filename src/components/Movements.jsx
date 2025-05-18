@@ -34,7 +34,7 @@ export const Movements = () => {
           ))
           .toReversed()
       ) : (
-        <p className="subtitle">Aún no hay transacciones registradas!</p>
+        <p className="subtitle empty">Aún no hay transacciones registradas!</p>
       )}
     </div>
   );

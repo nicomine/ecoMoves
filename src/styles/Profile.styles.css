@@ -6,16 +6,17 @@
   justify-content: start;
 
   background-color: #fdfdfd;
-   box-shadow:0px 0px 5px 0px rgba(209,206,206,0.75);
--webkit-box-shadow: 0px 0px 5px 0px rgba(209,206,206,0.75);
--moz-box-shadow: 0px 0px 5px 0px rgba(209,206,206,0.75);
+  box-shadow: 0px 0px 5px 0px rgba(209, 206, 206, 0.75);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(209, 206, 206, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(209, 206, 206, 0.75);
   margin: 15px;
 
+min-height: 20rem;
   height: fit-content;
   width: 20%;
   max-width: 30rem;
   border-radius: 15px;
-padding: 0 15px 30px 15px;
+  padding: 0 15px 30px 15px;
 
   text-transform: capitalize;
 }
@@ -44,13 +45,12 @@ padding: 0 15px 30px 15px;
   letter-spacing: 2px;
 }
 
-
 .money-history-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
- justify-items: center; 
+  justify-items: center;
 
-width: 100%;
+  width: 100%;
 }
 
 .history-item {
@@ -58,18 +58,18 @@ width: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-text-align: center;
+  text-align: center;
 
   border: 1px solid #ccc;
-border-radius: 15px;
-width: 50%;
-padding: 20px;
+  border-radius: 15px;
+  width: 50%;
+  padding: 20px;
 }
 
-.earn{
- background-color: rgba(150, 250, 150, 0.199);
+.earn {
+  background-color: rgba(150, 250, 150, 0.199);
 }
 
-.consume{
- background-color: rgba(255, 142, 142,0.199);
+.consume {
+  background-color: rgba(255, 142, 142, 0.199);
 }
