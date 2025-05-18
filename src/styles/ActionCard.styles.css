@@ -2,18 +2,19 @@
   display: flex;
   flex-direction: column;
 
-  align-self: center;
+  align-items: start;
+  justify-content: start;
 
-  align-items: center;
-  justify-content: flex-start;
-
-  background-color: #6f97a1;
-  border: 2.5px solid #486772;
+  background-color: #fdfdfd;
+  box-shadow: 0px 0px 5px 0px rgba(209, 206, 206, 0.75);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(209, 206, 206, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(209, 206, 206, 0.75);
   margin: 15px;
   border-radius: 15px;
 
-  height: 80dvh;
-  width: 30%;
+  height: fit-content;
+  padding: 0 0 30px 15px;
+  width: 20%;
 
   overflow: auto;
 }
@@ -26,7 +27,7 @@
 }
 
 .input-container {
-  margin: 2.5rem 0 2.5rem 1.5rem;
+  margin: 1rem 0 2rem 0rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -35,12 +36,23 @@
 }
 
 .input-container input {
-  background-color: #c6d8db;
-  border: 1px solid rgba(34, 43, 39);
+  background-color: #fdfdfd;
+  border: 1px solid #ccc;
   border-radius: 5px;
   height: 2rem;
-  min-width: 90%;
+  margin-bottom: 15px;
+  min-width: 100%;
   max-width: 10rem;
+transition: all 0.3s ease;
+}
+
+.input-container input:focus {
+  border: 1px solid black;
+  padding: 2.5px;
+}
+
+.input-container .subtitle {
+  color: black;
 }
 
 .button-container {
@@ -52,7 +64,7 @@
 }
 
 .button-container button {
-  margin: 0 2rem;
+  margin: 0 1rem;
   border: 1px solid rgb(34, 43, 39);
   font-weight: 600;
   font-size: 1rem;
@@ -60,27 +72,25 @@
 }
 
 .button-add {
-  width: 7rem;
-  height: 7rem;
-  background-color: #c6d8db;
-  border-radius: 15px;
- transition: width 0.3s ease, background-color 0.3s ease;
+  width: 164px;
+  height: 32px;
+background-color: #35c04c;
+  border-radius: 10px;
+  transition: width 0.3s ease, background-color 0.3s ease;
 }
 
 .button-add:hover {
-  width: 9rem;
-  background-color: #35c04c;
+  border: 1px solid rgb(214, 206, 206);
 }
 
 .button-decrease {
-  width: 7rem;
-  height: 7rem;
-  background-color: #c6d8db;
-  border-radius: 15px;
- transition: width 0.3s ease, background-color 0.3s ease;
+   width: 164px;
+  height: 32px;
+  background-color: #ec0606;
+ border-radius: 10px;
+  transition: all 0.3s ease
 }
 
 .button-decrease:hover {
-  width: 9rem;
-  background-color: #ec0606;
+    border: 1px solid rgb(214, 206, 206);
 }

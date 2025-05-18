@@ -2,29 +2,34 @@
   display: flex;
   flex-direction: row;
 
- justify-content: space-around;
-align-items: center;
-
+  justify-content: space-around;
+  align-items: center;
 
   width: 100vw;
   height: 100vh;
 
-font-family: "Montserrat", sans-serif;
-font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
 
+  overflow: auto;
+}
+.title-name {
+height: fit-content;
+ margin: 15px 0 15px;
 
-overflow: auto;
+ text-transform: capitalize;
+
+  font-weight:600;
+  font-size: 1.6rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
-.divider{
- width: 75%;
-height: 1px;
- 
-background-color: rgba(255, 255, 255, 0.171);
-
-
- display: block;
-position: relative;
-top:0;
-
+.subtitle {
+  color: #746f6f;
+  font-weight: 500;
+  font-size: 14px;
+  max-height: 1rem;
+  margin: 0px 0px 15px 0;
 }
